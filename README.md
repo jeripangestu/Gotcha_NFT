@@ -1,6 +1,6 @@
 # Gotcha NFT
 
-**[Gotcha NFT Auto Reff]
+**[Gotcha NFT Auto Reff]**
 
 ---
 
