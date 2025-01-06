@@ -106,15 +106,16 @@ def load_proxies(file_path):
 def get_proxy_for_index(proxies, index):
     if not proxies:
         return None
-    proxy = proxies[index % len(proxies)]
+    proxy = proxies[index % len(proxies)]  # Ambil proxy berdasarkan indeks
     return {
-        "http": f"http://{proxy}",
-        "https": f"http://{proxy}"
+        "http": proxy,
+        "https": proxy
     }
 
 def process_single_wallet(address, referral_code, index, total, proxies):
     print_status(f"Wallet {index}/{total}", "header")
     proxy = get_proxy_for_index(proxies, index)
+    print_status(f"Using proxy: {proxy}", "info")  # Debug proxy
     try:
         success, data = get_one_referral(address, proxies=proxy)
         if not data:
