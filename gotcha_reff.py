@@ -15,11 +15,11 @@ init(autoreset=True)
 
 def print_status(message, status=None):
     if status == "success":
-        print(f"{Fore.GREEN}[SUKSES] {message}{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}✔️ [SUKSES] {message}{Style.RESET_ALL}")
     elif status == "error":
-        print(f"{Fore.RED}[GAGAL] {message}{Style.RESET_ALL}")
+        print(f"{Fore.RED}❌ [GAGAL] {message}{Style.RESET_ALL}")
     elif status == "info":
-        print(f"{Fore.YELLOW}[INFO] {message}{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}⏳ [INFO] {message}{Style.RESET_ALL}")
     elif status == "header":
         print(f"\n{Fore.BLUE+Style.BRIGHT}{'='*50}")
         print(f"{Fore.CYAN}{message}")
@@ -174,8 +174,8 @@ def process_wallet_addresses(wallet_addresses, referral_code, proxies, num_threa
     print(f"{Fore.RED}Failed referrals: {total - success_count}{Style.RESET_ALL}")
 
 def main():
-    print(Fore.GREEN + Style.BRIGHT + "SELAMAT DATANG DI JERPANG BOT" + Fore.RESET)
-    print(Fore.CYAN + Style.BRIGHT + "No rusuh babi! \n\n" + Fore.RESET)
+    print(Fore.GREEN + Style.BRIGHT + "SELAMAT DATANG DI JERPANG BOT ✔️" + Fore.RESET)
+    print(Fore.CYAN + Style.BRIGHT + "No rusuh babi! ⏳\n\n" + Fore.RESET)
     try:
         referral_code = load_referral_code('refferal_code.txt')
         print_status(f"Loaded referral code: {referral_code}", "info")
